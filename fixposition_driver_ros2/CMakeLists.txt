@@ -80,6 +80,11 @@ if($ENV{ROS_DISTRO} MATCHES "humble|jazzy|rolling")
     cpp_typesupport_target
     ${PROJECT_NAME} "rosidl_typesupport_cpp"
   )
+elseif($ENV{ROS_DISTRO} MATCHES "foxy|galactic")
+  rosidl_target_interfaces(
+    ${PROJECT_NAME}_exec
+    ${PROJECT_NAME} "rosidl_typesupport_cpp"
+  )
 else()
   message(FATAL_ERROR "Unsupported ROS_DISTRO")
 endif()

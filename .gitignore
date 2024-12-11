@@ -1,4 +1,6 @@
 build/*
+install/*
+log/*
 doc_gen/*
 */doc_gen/*
 *.vscode*
